@@ -28,7 +28,7 @@ const StyledDropdown = styled.div`
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
-  
+
       div {
         background-color: var(--slate-dark-11);;
         height: 2px;
@@ -104,38 +104,6 @@ export function DevActionsDropdown(props) {
             <div />
           </div>
         </button>
-        <ul className="dropdown-menu" aria-labelledby="dropdownMenu2222">
-          {props.widgetSrc?.edit && (
-            <li>
-              <Link to={`/edit/${props.widgetSrc?.edit}`}>
-                <Fork />
-                {props.widgetSrc.edit.startsWith(`${account.accountId}/widget/`)
-                  ? "Edit widget"
-                  : "Fork widget"}
-              </Link>
-            </li>
-          )}
-          {props.widgetSrc?.view && (
-            <li>
-              <Link
-                to={`/${props.widgets.viewSource}?src=${props.widgetSrc?.view}`}
-              >
-                <Code />
-                View source
-              </Link>
-            </li>
-          )}
-          {props.widgets.viewHistory && props.widgetSrc?.view && (
-            <li>
-              <Link
-                to={`/${props.widgets.viewHistory}?widgetPath=${props.widgetSrc?.view}`}
-              >
-                <Diff />
-                View history
-              </Link>
-            </li>
-          )}
-        </ul>
       </StyledDropdown>
     );
   } else {

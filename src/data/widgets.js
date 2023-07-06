@@ -19,7 +19,7 @@ const TestnetWidgets = {
 
 const MainnetWidgets = {
   image: "mob.near/widget/Image",
-  default: "mob.near/widget/Homepage",
+  default: "sharddog.near/widget/Just-Feed",
   viewSource: "mob.near/widget/WidgetSource",
   widgetMetadataEditor: "mob.near/widget/WidgetMetadataEditor",
   widgetMetadata: "mob.near/widget/WidgetMetadata",
@@ -30,6 +30,7 @@ const MainnetWidgets = {
   editorComponentSearch: "mob.near/widget/Editor.ComponentSearch",
   profileInlineBlock: "mob.near/widget/Profile.InlineBlock",
   viewHistory: "bozon.near/widget/WidgetHistory",
+  allFeed: "sharddog.near/widget/All-Feed",
 };
 
 export const Widgets =

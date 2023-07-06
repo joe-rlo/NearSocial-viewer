@@ -12,9 +12,9 @@ const StyledNavigation = styled.div`
   left: 0;
   right: 0;
   width: 100%;
-  background-color: var(--slate-dark-1);
-  z-index: 1000;
-  padding: 16px 24px;
+  background-color: var(--slate-dark-10);
+  z-index: 99;
+  padding: 4px 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;

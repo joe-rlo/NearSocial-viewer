@@ -35,7 +35,6 @@ export function MobileMenuButton(props) {
         <div />
         <div />
       </div>
-      {props.currentPage}
     </StyledMobileMenuButton>
   );
 }

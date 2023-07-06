@@ -6,6 +6,7 @@ import { Book } from "../../icons/Book";
 import { Code } from "../../icons/Code";
 import { LogOut } from "../../icons/LogOut";
 import { Fork } from "../../icons/Fork";
+import { NearSocialIcon } from "../../icons/NearSocialIcon";
 import { UserCircle } from "../../icons/UserCircle";
 import { Widget } from "near-social-vm";
 import { NavigationButton } from "../NavigationButton";
@@ -202,41 +203,19 @@ export function Menu(props) {
             </NavigationButton>
           </li>
           <li>
-            <NavigationButton route="/edit">
+            <NavigationButton route={`/${props.widgets.allFeed}`}>
               <Code />
-              Editor
+              Fire Hose Feed
             </NavigationButton>
           </li>
           <li>
-            <NavigationButton href={props.documentationHref}>
-              <Book />
-              Documentation
+            <NavigationButton>
+              <NearSocialIcon />
+              Dog Park (Coming Soon)
             </NavigationButton>
           </li>
         </ul>
         <ul className="bottom-links">
-          {props.widgetSrc?.edit && (
-            <li>
-              <Link to={`/edit/${props.widgetSrc?.edit}`}>
-                <Fork />
-                {props.widgetSrc.edit.startsWith(
-                  `${props.signedAccountId}/widget/`
-                )
-                  ? "Edit widget"
-                  : "Fork widget"}
-              </Link>
-            </li>
-          )}
-          {props.widgetSrc?.view && (
-            <li>
-              <Link
-                to={`/${props.widgets.viewSource}?src=${props.widgetSrc?.view}`}
-              >
-                <Code />
-                View source
-              </Link>
-            </li>
-          )}
           {props.signedIn && (
             <li>
               <button onClick={() => props.logOut()} className="log-out-button">

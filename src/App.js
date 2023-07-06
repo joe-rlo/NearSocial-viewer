@@ -6,6 +6,7 @@ import "react-bootstrap-typeahead/css/Typeahead.css";
 import "react-bootstrap-typeahead/css/Typeahead.bs5.css";
 import "bootstrap/dist/js/bootstrap.bundle";
 import "App.scss";
+import "custom-bootstrap.css";
 import { HashRouter as Router, Link, Route, Switch } from "react-router-dom";
 import EditorPage from "./pages/EditorPage";
 import ViewPage from "./pages/ViewPage";
@@ -29,7 +30,6 @@ import {
 import Big from "big.js";
 import { NavigationWrapper } from "./components/navigation/NavigationWrapper";
 import { NetworkId, Widgets } from "./data/widgets";
-import { useEthersProviderContext } from "./data/web3";
 
 export const refreshAllowanceObj = {};
 const documentationHref = "https://social.near-docs.io/";
@@ -42,7 +42,7 @@ function App(props) {
   const [walletModal, setWalletModal] = useState(null);
   const [widgetSrc, setWidgetSrc] = useState(null);
 
-  const ethersProviderContext = useEthersProviderContext();
+  //const ethersProviderContext = useEthersProviderContext();
 
   const { initNear } = useInitNear();
   const near = useNear();
@@ -167,23 +167,21 @@ function App(props) {
 
   return (
     <div className="App">
-      <EthersProviderContext.Provider value={ethersProviderContext}>
-        <Router basename={process.env.PUBLIC_URL}>
-          <Switch>
-            <Route path={"/embed/:widgetSrc*"}>
-              <EmbedPage {...passProps} />
-            </Route>
-            <Route path={"/edit/:widgetSrc*"}>
-              <NavigationWrapper {...passProps} />
-              <EditorPage {...passProps} />
-            </Route>
-            <Route path={"/:widgetSrc*"}>
-              <NavigationWrapper {...passProps} />
-              <ViewPage {...passProps} />
-            </Route>
-          </Switch>
-        </Router>
-      </EthersProviderContext.Provider>
+      <Router basename={process.env.PUBLIC_URL}>
+        <Switch>
+          <Route path={"/embed/:widgetSrc*"}>
+            <EmbedPage {...passProps} />
+          </Route>
+          <Route path={"/edit/:widgetSrc*"}>
+            <NavigationWrapper {...passProps} />
+            <EditorPage {...passProps} />
+          </Route>
+          <Route path={"/:widgetSrc*"}>
+            <NavigationWrapper {...passProps} />
+            <ViewPage {...passProps} />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }

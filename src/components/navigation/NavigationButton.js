@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 const StyledNavigationButton = styled.div`
   a {
-    color: var(--slate-dark-11);
+    color: white;
     font-size: 16px;
     padding: 10px;
     border-radius: 8px;

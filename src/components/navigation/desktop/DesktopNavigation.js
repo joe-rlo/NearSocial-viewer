@@ -15,9 +15,10 @@ const StyledNavigation = styled.div`
   left: 0;
   right: 0;
   width: 100%;
-  background-color: var(--slate-dark-1);
-  z-index: 1000;
-  padding: 12px 0;
+  background-color: var(--slate-dark-10);
+  z-index: 99;
+  padding: 6px 0;
+  color: white;
 
   .user-section {
     margin-left: auto;
@@ -64,19 +65,17 @@ export function DesktopNavigation(props) {
   return (
     <StyledNavigation>
       <div className="container">
-        <Link to="/" className="logo-link">
-          <Logotype />
+        <Link to="/" className="logo">
+          ShardDog.Social
         </Link>
         <div className="navigation-section">
           <NavigationButton route="/">Home</NavigationButton>
-          <NavigationButton route="/edit">Editor</NavigationButton>
-          <NavigationButton href={props.documentationHref}>
-            Docs
-            <ArrowUpRight />
+          <NavigationButton route={`/${props.widgets.allFeed}`}>
+            Fire Hose Feed
           </NavigationButton>
+          <NavigationButton>Dog Park (Coming Soon)</NavigationButton>
         </div>
         <div className="user-section">
-          <DevActionsDropdown {...props} />
           {!props.signedIn && (
             <SignInButton onSignIn={() => props.requestSignIn()} />
           )}

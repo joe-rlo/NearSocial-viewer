@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { Widget } from "near-social-vm";
 import { useParams } from "react-router-dom";
 import { useQuery } from "../hooks/useQuery";
@@ -38,7 +38,7 @@ export default function ViewPage(props) {
         <div
           className="d-inline-block position-relative overflow-hidden"
           style={{
-            "--body-top-padding": "24px",
+            "--body-top-padding": "4px",
             paddingTop: "var(--body-top-padding)",
           }}
         >
