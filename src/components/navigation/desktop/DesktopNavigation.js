@@ -71,7 +71,7 @@ export function DesktopNavigation(props) {
         <div className="navigation-section">
           <NavigationButton route="/">Home</NavigationButton>
           <NavigationButton route={`/${props.widgets.allFeed}`}>
-            Fire Hose Feed
+            Firehose Feed
           </NavigationButton>
           <NavigationButton>Dog Park (Coming Soon)</NavigationButton>
         </div>

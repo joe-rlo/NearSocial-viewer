@@ -205,7 +205,7 @@ export function Menu(props) {
           <li>
             <NavigationButton route={`/${props.widgets.allFeed}`}>
               <Code />
-              Fire Hose Feed
+              Firehose Feed
             </NavigationButton>
           </li>
           <li>
