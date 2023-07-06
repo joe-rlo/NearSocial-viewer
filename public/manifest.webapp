@@ -1,0 +1,16 @@
+{
+  "short_name": "ShardDog Social",
+  "name": "ShardDog Social",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "1024x1024",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/index.html",
+  "display": "fullscreen",
+  "theme_color": "#64a19d",
+  "background_color": "#ffffff",
+  "orientation": "landscape"
+}
