@@ -10,6 +10,7 @@ import "custom-bootstrap.css";
 import { HashRouter as Router, Link, Route, Switch } from "react-router-dom";
 import EditorPage from "./pages/EditorPage";
 import ViewPage from "./pages/ViewPage";
+import ChangelogPage from "./pages/ChangeLog";
 import { setupWalletSelector } from "@near-wallet-selector/core";
 import { setupNearWallet } from "@near-wallet-selector/near-wallet";
 import { setupMyNearWallet } from "@near-wallet-selector/my-near-wallet";
@@ -175,6 +176,10 @@ function App(props) {
           <Route path={"/edit/:widgetSrc*"}>
             <NavigationWrapper {...passProps} />
             <EditorPage {...passProps} />
+          </Route>
+          <Route path="/changes">
+            <NavigationWrapper {...passProps} />
+            <ChangelogPage {...passProps} />
           </Route>
           <Route path={"/:widgetSrc*"}>
             <NavigationWrapper {...passProps} />

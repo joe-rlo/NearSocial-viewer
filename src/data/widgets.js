@@ -31,6 +31,7 @@ const MainnetWidgets = {
   profileInlineBlock: "mob.near/widget/Profile.InlineBlock",
   viewHistory: "bozon.near/widget/WidgetHistory",
   allFeed: "sharddog.near/widget/All-Feed",
+  search: "brad123.near/widget/SearchPeople",
 };
 
 export const Widgets =

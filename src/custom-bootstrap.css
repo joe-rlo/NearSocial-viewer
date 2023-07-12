@@ -11612,3 +11612,12 @@ body {
   margin: 0 auto;
   text-align: center;
 }
+
+p > #ytplayer {
+  display: flex;
+  margin: 0 auto;
+}
+
+#changelog {
+  text-align: left;
+}

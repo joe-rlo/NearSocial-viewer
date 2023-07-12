@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { Logotype } from "../Logotype";
 import { NavigationButton } from "../NavigationButton";
 import { ArrowUpRight } from "../../icons/ArrowUpRight";
+import { Book } from "../../icons/Book";
 import { SignInButton } from "../SignInButton";
 import { UserDropdown } from "./UserDropdown";
 import { DevActionsDropdown } from "./DevActionsDropdown";
@@ -70,12 +71,16 @@ export function DesktopNavigation(props) {
         </Link>
         <div className="navigation-section">
           <NavigationButton route="/">Home</NavigationButton>
+          <NavigationButton route={`/${props.widgets.search}`}>
+            Search
+          </NavigationButton>
           <NavigationButton route={`/${props.widgets.allFeed}`}>
             Firehose Feed
           </NavigationButton>
           <NavigationButton>Dog Park (Coming Soon)</NavigationButton>
         </div>
         <div className="user-section">
+          <NavigationButton route={"/changes"}>Changelog</NavigationButton>
           {!props.signedIn && (
             <SignInButton onSignIn={() => props.requestSignIn()} />
           )}

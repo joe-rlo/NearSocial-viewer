@@ -203,6 +203,12 @@ export function Menu(props) {
             </NavigationButton>
           </li>
           <li>
+            <NavigationButton route={`/${props.widgets.search}`}>
+              <UserCircle />
+              Search
+            </NavigationButton>
+          </li>
+          <li>
             <NavigationButton route={`/${props.widgets.allFeed}`}>
               <Code />
               Firehose Feed
@@ -216,6 +222,12 @@ export function Menu(props) {
           </li>
         </ul>
         <ul className="bottom-links">
+          <li>
+            <NavigationButton route="/changes">
+              <Book />
+              Changelog
+            </NavigationButton>
+          </li>
           {props.signedIn && (
             <li>
               <button onClick={() => props.logOut()} className="log-out-button">
