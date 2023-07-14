@@ -10,11 +10,19 @@ export default function ChangelogPage() {
   // Replace this with data fetched from an API or other source
   const [changelog, setChangelog] = useState([
     {
+      version: "2023-07-14",
+      changes: [
+        "Minor clean-up of post composer",
+        "Apple music embed support (just post the share URL)",
+      ],
+    },
+    {
       version: "2023-07-12",
       changes: [
         "Removed cookies from YouTube links",
         "Added user search",
         "Misc layout improvements",
+        "Changed the save data screen",
         "This changelog",
       ],
     },
