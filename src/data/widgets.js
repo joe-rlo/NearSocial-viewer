@@ -32,6 +32,7 @@ const MainnetWidgets = {
   viewHistory: "bozon.near/widget/WidgetHistory",
   allFeed: "sharddog.near/widget/All-Feed",
   search: "brad123.near/widget/SearchPeople",
+  dogPark: "efiz.near/widget/Sharddog",
 };
 
 export const Widgets =
