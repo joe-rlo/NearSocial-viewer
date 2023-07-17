@@ -6,6 +6,7 @@ import { Book } from "../../icons/Book";
 import { Code } from "../../icons/Code";
 import { LogOut } from "../../icons/LogOut";
 import { Fork } from "../../icons/Fork";
+import { DarkMode } from "../../icons/DarkMode";
 import { NearSocialIcon } from "../../icons/NearSocialIcon";
 import { UserCircle } from "../../icons/UserCircle";
 import { Widget } from "near-social-vm";
@@ -154,6 +155,25 @@ const StyledMenu = styled.div`
   }
 `;
 
+function toggleDarkMode() {
+  if (document.documentElement.classList.contains("light")) {
+    document.documentElement.classList.remove("light");
+    document.documentElement.classList.add("dark");
+  } else if (document.documentElement.classList.contains("dark")) {
+    document.documentElement.classList.remove("dark");
+    document.documentElement.classList.add("light");
+  } /*else {
+    if (
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+    ) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.add("light");
+    }
+  }*/
+}
+
 export function Menu(props) {
   return (
     <StyledMenu className={props.showMenu ? "show" : ""}>
@@ -228,6 +248,13 @@ export function Menu(props) {
               Changelog
             </NavigationButton>
           </li>
+
+          <li>
+            <NavigationButton className="light">
+              <DarkMode /> Dark Mode (coming soon)
+            </NavigationButton>
+          </li>
+
           {props.signedIn && (
             <li>
               <button onClick={() => props.logOut()} className="log-out-button">

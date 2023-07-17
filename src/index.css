@@ -17,3 +17,25 @@
   --account-center-position-top: 64px;
   --account-center-position-right: -10px;
 }
+/*
+@media (prefers-color-scheme: dark) {
+  :root {
+    --slate-light-1: #ebecee;
+    --slate-light-5: #d5d7d8;
+    --slate-light-6: #cacccd;
+    --slate-light-8: #a6a9ab;
+    --slate-light-9: #888b8d;
+    --slate-light-11: #65686a;
+    --slate-light-12: #121315;
+    --slate-dark-10: #64a19d;
+    --blue-light-9: #0091ff;
+
+    --font-weight-medium: 500;
+    --font-weight-bold: 600;
+
+
+    --account-center-z-index: 999;
+    --account-center-position-top: 64px;
+    --account-center-position-right: -10px;
+  }
+}*/

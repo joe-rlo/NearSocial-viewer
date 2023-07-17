@@ -9,8 +9,12 @@
  * Copyright 2011-2022 The Bootstrap Authors
  * Copyright 2011-2022 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+
+
  */
-:root {
+/* Light mode */
+:root,
+:root.light {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
   --bs-purple: #7464a1;
@@ -35,6 +39,7 @@
   --bs-gray-800: #343a40;
   --bs-gray-900: #212529;
   --bs-primary: #64a19d;
+  --bs-primary-2: #467370;
   --bs-secondary: #7464a1;
   --bs-success: #67c29c;
   --bs-info: #1cabc4;
@@ -90,6 +95,92 @@
   --bs-link-hover-color: #50817e;
   --bs-code-color: #d63384;
   --bs-highlight-bg: #faf4e0;
+}
+
+/* Dark mode
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bs-body-bg: #333435;
+    --bs-body-color: #ffffff;
+    --slate-light-1: #ebecee;
+    --slate-light-5: #d5d7d8;
+    --slate-light-6: #cacccd;
+    --slate-light-8: #a6a9ab;
+    --slate-light-9: #888b8d;
+    --slate-light-11: #65686a;
+    --slate-light-12: #121315;
+    --bs-dark: #d6d8db;
+    --bs-light: #343a40;
+    --bs-black: #fff;
+    --bs-white: #000;
+    --bs-primary-rgb: 155, 94, 98;
+    --bs-secondary-rgb: 139, 155, 94;
+    --bs-success-rgb: 152, 61, 99;
+    --bs-info-rgb: 227, 84, 59;
+    --bs-warning-rgb: 27, 57, 157;
+    --bs-danger-rgb: 94, 155, 151;
+    --bs-light-rgb: 52, 58, 64;
+    --bs-dark-rgb: 214, 216, 219;
+    --bs-black-rgb: 255, 255, 255;
+    --bs-white-rgb: 0, 0, 0;
+    --bs-body-color-rgb: 214, 216, 219;
+    --bs-body-bg-rgb: 33, 37, 41;
+    --bs-black: #fff;
+    --bs-white: #000;
+    --bs-gray: #938ca2;
+    --bs-gray-dark: #cbcbcb;
+    --bs-gray-100: #070606;
+    --bs-gray-200: #161616;
+    --bs-gray-300: #212121;
+    --bs-gray-400: #323232;
+    --bs-gray-500: #525252;
+    --bs-gray-600: #938ca2;
+    --bs-gray-700: #b6b6b6;
+    --bs-gray-800: #cbcbcb;
+    --bs-gray-900: #dedede;
+
+  }
+}
+*/
+:root.dark {
+  --bs-body-bg: #333435;
+  --bs-body-color: #ffffff;
+  --slate-light-1: #ebecee;
+  --slate-light-5: #d5d7d8;
+  --slate-light-6: #cacccd;
+  --slate-light-8: #a6a9ab;
+  --slate-light-9: #888b8d;
+  --slate-light-11: #65686a;
+  --slate-light-12: #121315;
+  --bs-dark: #d6d8db;
+  --bs-light: #343a40;
+  --bs-black: #fff;
+  --bs-white: #000;
+  --bs-primary-rgb: 155, 94, 98;
+  --bs-secondary-rgb: 139, 155, 94;
+  --bs-success-rgb: 152, 61, 99;
+  --bs-info-rgb: 227, 84, 59;
+  --bs-warning-rgb: 27, 57, 157;
+  --bs-danger-rgb: 94, 155, 151;
+  --bs-light-rgb: 52, 58, 64;
+  --bs-dark-rgb: 214, 216, 219;
+  --bs-black-rgb: 255, 255, 255;
+  --bs-white-rgb: 0, 0, 0;
+  --bs-body-color-rgb: 214, 216, 219;
+  --bs-body-bg-rgb: 33, 37, 41;
+  --bs-black: #fff;
+  --bs-white: #000;
+  --bs-gray: #938ca2;
+  --bs-gray-dark: #cbcbcb;
+  --bs-gray-100: #070606;
+  --bs-gray-200: #161616;
+  --bs-gray-300: #212121;
+  --bs-gray-400: #323232;
+  --bs-gray-500: #525252;
+  --bs-gray-600: #938ca2;
+  --bs-gray-700: #b6b6b6;
+  --bs-gray-800: #cbcbcb;
+  --bs-gray-900: #dedede;
 }
 
 *,
@@ -11330,13 +11421,13 @@ body {
 
 #mainNav {
   min-height: 3.5rem;
-  background-color: #fff;
+  background-color: var(--bs-white);
 }
 #mainNav .navbar-toggler {
   font-size: 80%;
   padding: 0.75rem;
   color: #64a19d;
-  border: 1px solid #64a19d;
+  border: 1px solid var(--bs-primary);
 }
 #mainNav .navbar-toggler:focus {
   outline: none;
@@ -11347,7 +11438,7 @@ body {
   padding: 0.9rem 0;
 }
 #mainNav .navbar-nav .nav-item:hover {
-  color: fade(#fff, 80%);
+  color: fade(var(--bs-white), 80%);
   outline: none;
   background-color: transparent;
 }
@@ -11377,29 +11468,29 @@ body {
     color: rgba(255, 255, 255, 0.75);
   }
   #mainNav .nav-link:active {
-    color: #fff;
+    color: var(--bs-white);
   }
   #mainNav.navbar-shrink {
-    background-color: #fff;
+    background-color: var(--bs-white);
   }
   #mainNav.navbar-shrink .navbar-brand {
-    color: #000;
+    color: var(--bs-black);
   }
   #mainNav.navbar-shrink .nav-link {
-    color: #000;
+    color: var(--bs-black);
     padding: 1.5rem 1.5rem 1.25rem;
     border-bottom: 0.25rem solid transparent;
   }
   #mainNav.navbar-shrink .nav-link:hover {
-    color: #64a19d;
+    color: var(--bs-primary);
   }
   #mainNav.navbar-shrink .nav-link:active {
-    color: #467370;
+    color: var(--bs-primary-2);
   }
   #mainNav.navbar-shrink .nav-link.active {
-    color: #64a19d;
+    color: var(--bs-primary);
     outline: none;
-    border-bottom: 0.25rem solid #64a19d;
+    border-bottom: 0.25rem solid var(--bs-primary);
   }
 }
 
@@ -11498,7 +11589,7 @@ body {
 @media (min-width: 992px) {
   .projects-section .featured-text {
     padding: 0 0 0 2rem;
-    border-left: 0.5rem solid #64a19d;
+    border-left: 0.5rem solid var(--bs-primary);
   }
 }
 .projects-section .project-text {
@@ -11543,7 +11634,7 @@ body {
 }
 .contact-section .card {
   border: 0;
-  border-bottom: 0.25rem solid #64a19d;
+  border-bottom: 0.25rem solid var(--bs-primary);
 }
 .contact-section .card h4,
 .contact-section .card .h4 {
@@ -11576,7 +11667,7 @@ body {
   color: rgba(255, 255, 255, 0.5);
 }
 .contact-section .social a:active {
-  color: #fff;
+  color: var(--bs-white);
 }
 
 .footer {
@@ -11584,23 +11675,23 @@ body {
 }
 
 .logo {
-  color: white;
+  color: var(--bs-white);
   font-weight: bold;
   text-decoration: none;
 }
 
 .nav-link {
   text-align: center;
-  background-color: lightgrey;
+  background-color: var(--bs-gray-500);
 }
 
 .nav-link.active {
-  background-color: #64a19d;
+  background-color: var(--bs-primary);
 }
 
 .postcard {
   padding: 4px;
-  box-shadow: 12px 12px 10px -15px #111;
+  box-shadow: 12px 12px 10px -15px var(--bs-gray-900);
 }
 
 .sharebtn {
