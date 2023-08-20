@@ -1,6 +1,6 @@
 {
   "name": "frontend",
-  "version": "0.12.3",
+  "version": "0.14.0",
   "homepage": "/",
   "private": true,
   "dependencies": {
@@ -33,6 +33,7 @@
     "react-bootstrap-typeahead": "^6.1.2",
     "react-dom": "^18.2.0",
     "react-router-dom": "^5.2.0",
+    "react-zoom-pan-pinch": "^3.1.0",
     "styled-components": "^5.3.6"
   },
   "scripts": {

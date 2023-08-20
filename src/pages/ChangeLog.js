@@ -10,6 +10,16 @@ export default function ChangelogPage() {
   // Replace this with data fetched from an API or other source
   const [changelog, setChangelog] = useState([
     {
+      version: "2023-08-20",
+      changes: [
+        "Branding update",
+        "Support for Dark Mode",
+        "Comic book viewer",
+        "ShardDog Claim success page",
+        "Placeholder for dog park updated",
+      ],
+    },
+    {
       version: "2023-07-16",
       changes: [
         "Twitter embeds from Twitter share URL",

@@ -7,10 +7,13 @@ import "react-bootstrap-typeahead/css/Typeahead.bs5.css";
 import "bootstrap/dist/js/bootstrap.bundle";
 import "App.scss";
 import "custom-bootstrap.css";
-import { HashRouter as Router, Link, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
 import EditorPage from "./pages/EditorPage";
 import ViewPage from "./pages/ViewPage";
 import ChangelogPage from "./pages/ChangeLog";
+import ClaimSuccess from "./pages/ClaimSuccess";
+import ComicPage from "./pages/ComicPage";
+import DogParkPage from "./pages/DogParkPage";
 import { setupWalletSelector } from "@near-wallet-selector/core";
 import { setupNearWallet } from "@near-wallet-selector/near-wallet";
 import { setupMyNearWallet } from "@near-wallet-selector/my-near-wallet";
@@ -50,8 +53,6 @@ function App(props) {
   const near = useNear();
   const account = useAccount();
   const accountId = account.accountId;
-
-  const location = window.location;
 
   useEffect(() => {
     initNear &&
@@ -182,6 +183,17 @@ function App(props) {
             <Route path="/changes">
               <NavigationWrapper {...passProps} />
               <ChangelogPage {...passProps} />
+            </Route>
+            <Route path="/claimsuccess/:id">
+              <ClaimSuccess {...passProps} />
+            </Route>
+            <Route path={"/comic*"}>
+              <NavigationWrapper {...passProps} />
+              <ComicPage {...passProps} />
+            </Route>
+            <Route path={"/dogpark*"}>
+              <NavigationWrapper {...passProps} />
+              <DogParkPage {...passProps} />
             </Route>
             <Route path={"/:widgetSrc*"}>
               <NavigationWrapper {...passProps} />

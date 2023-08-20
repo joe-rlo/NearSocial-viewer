@@ -3,6 +3,7 @@ import ls from "local-storage";
 import prettier from "prettier";
 import parserBabel from "prettier/parser-babel";
 import { useHistory, useParams } from "react-router-dom";
+import { useHashRouterLegacy } from "../hooks/useHashRouterLegacy";
 import Editor from "@monaco-editor/react";
 import {
   Widget,
@@ -41,6 +42,7 @@ const Layout = {
 };
 
 export default function EditorPage(props) {
+  useHashRouterLegacy();
   const { widgetSrc } = useParams();
   const history = useHistory();
   const setWidgetSrc = props.setWidgetSrc;
@@ -595,7 +597,7 @@ export default function EditorPage(props) {
                   {path && accountId && (
                     <a
                       className="btn btn-outline-primary"
-                      href={`#/${widgetPath}`}
+                      href={`/${widgetPath}`}
                       target="_blank"
                       rel="noopener noreferrer"
                     >

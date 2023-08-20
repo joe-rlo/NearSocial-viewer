@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { Close } from "../../icons/Close";
 import { Home } from "../../icons/Home";
@@ -155,26 +155,22 @@ const StyledMenu = styled.div`
   }
 `;
 
-function toggleDarkMode() {
-  if (document.documentElement.classList.contains("light")) {
-    document.documentElement.classList.remove("light");
-    document.documentElement.classList.add("dark");
-  } else if (document.documentElement.classList.contains("dark")) {
-    document.documentElement.classList.remove("dark");
-    document.documentElement.classList.add("light");
-  } /*else {
-    if (
-      window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches
-    ) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.add("light");
-    }
-  }*/
-}
-
 export function Menu(props) {
+  const [isDarkTheme, setIsDarkTheme] = useState(false);
+
+  const toggleTheme = () => {
+    setIsDarkTheme(!isDarkTheme);
+  };
+
+  useEffect(() => {
+    const root = document.documentElement;
+    if (isDarkTheme) {
+      root.classList.add("dark");
+    } else {
+      root.classList.remove("dark");
+    }
+  }, [isDarkTheme]);
+
   return (
     <StyledMenu className={props.showMenu ? "show" : ""}>
       <div className="left-side">
@@ -235,7 +231,13 @@ export function Menu(props) {
             </NavigationButton>
           </li>
           <li>
-            <NavigationButton>
+            <NavigationButton route="/comic">
+              <Book />
+              Comic
+            </NavigationButton>
+          </li>
+          <li>
+            <NavigationButton route="/dogpark">
               <NearSocialIcon />
               Dog Park (Coming Soon)
             </NavigationButton>
@@ -249,11 +251,11 @@ export function Menu(props) {
             </NavigationButton>
           </li>
 
-          <li>
-            <NavigationButton className="light">
-              <DarkMode /> Dark Mode (coming soon)
-            </NavigationButton>
-          </li>
+          {/*} <li>
+            <button onClick={toggleTheme}>
+              <DarkMode /> Switch Mode
+            </button>
+          </li>{*/}
 
           {props.signedIn && (
             <li>

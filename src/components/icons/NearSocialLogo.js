@@ -3,6 +3,10 @@ import logoImage from "../../assets/img/ShardDogLogo.png"; // Replace with the a
 
 export function NearSocialLogo() {
   return (
-    <img src={logoImage} alt="ShardDog Social Logo" width="30" height="30" />
+    <div
+      style={{ background: "#F3EDE1", borderRadius: "20px", paddingTop: "3px" }}
+    >
+      <img src={logoImage} alt="ShardDog Social Logo" width="40" height="40" />
+    </div>
   );
 }

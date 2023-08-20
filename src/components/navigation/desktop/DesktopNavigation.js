@@ -9,6 +9,7 @@ import { SignInButton } from "../SignInButton";
 import { UserDropdown } from "./UserDropdown";
 import { DevActionsDropdown } from "./DevActionsDropdown";
 import { NotificationWidget } from "../NotificationWidget";
+import { NearSocialLogo } from "../../icons/NearSocialLogo";
 
 const StyledNavigation = styled.div`
   position: sticky;
@@ -67,7 +68,7 @@ export function DesktopNavigation(props) {
     <StyledNavigation>
       <div className="container">
         <Link to="/" className="logo">
-          ShardDog.Social
+          <NearSocialLogo />
         </Link>
         <div className="navigation-section">
           <NavigationButton route="/">Home</NavigationButton>
@@ -77,7 +78,8 @@ export function DesktopNavigation(props) {
           <NavigationButton route={`/${props.widgets.allFeed}`}>
             Firehose Feed
           </NavigationButton>
-          <NavigationButton>Dog Park (Coming Soon)</NavigationButton>
+          <NavigationButton route={"/comic"}>Comic</NavigationButton>
+          <NavigationButton route={"/dogpark"}>Dog Park</NavigationButton>
         </div>
         <div className="user-section">
           <NavigationButton route={"/changes"}>Changelog</NavigationButton>
