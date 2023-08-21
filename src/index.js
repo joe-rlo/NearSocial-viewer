@@ -2,21 +2,7 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App";
-import "./service-worker.js";
 
 const container = document.getElementById("root");
 const root = createRoot(container);
 root.render(<App />);
-// index.js
-if ("serviceWorker" in navigator) {
-  window.addEventListener("load", () => {
-    navigator.serviceWorker
-      .register("./service-worker.js")
-      .then((registration) => {
-        console.log("Service worker registered:", registration);
-      })
-      .catch((error) => {
-        console.log("Service worker registration failed:", error);
-      });
-  });
-}
