@@ -57,10 +57,6 @@ const StyledMenu = styled.div`
       }
     }
 
-    img {
-      border-radius: 50% !important;
-    }
-
     .profile-name {
       color: var(--slate-dark-12);
       font-weight: var(--font-weight-bold);
@@ -90,6 +86,9 @@ const StyledMenu = styled.div`
       font-weight: var(--font-weight-bold);
 
       svg {
+        margin-right: 12px;
+      }
+      img {
         margin-right: 12px;
       }
 
@@ -238,8 +237,7 @@ export function Menu(props) {
           </li>
           <li>
             <NavigationButton route="/dogpark">
-              <NearSocialIcon />
-              Dog Park (Coming Soon)
+              <NearSocialIcon /> Dog Park (Coming Soon)
             </NavigationButton>
           </li>
         </ul>
@@ -250,12 +248,6 @@ export function Menu(props) {
               Changelog
             </NavigationButton>
           </li>
-
-          {/*} <li>
-            <button onClick={toggleTheme}>
-              <DarkMode /> Switch Mode
-            </button>
-          </li>{*/}
 
           {props.signedIn && (
             <li>

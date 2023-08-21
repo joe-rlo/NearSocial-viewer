@@ -1,10 +1,4 @@
-import {
-  Widget,
-  useCache,
-  useNear,
-  CommitButton,
-  useAccountId,
-} from "near-social-vm";
+import { useAccountId } from "near-social-vm";
 import React, { useState, useEffect } from "react";
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 
@@ -91,7 +85,7 @@ const NFTGrid = () => {
     <div className="comic-wrapper">
       <div className="dividing-canopy"></div>
       <div className="comic-context-title">
-        <div className="context-title-text">ShardDog The Comic</div>
+        <div className="context-title-text">ShardDog The Comic [soon]</div>
       </div>
       <div className="comic-layout">
         <div className="nft-grid">
