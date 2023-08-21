@@ -2980,8 +2980,8 @@ textarea.form-control.is-invalid {
 }
 
 .btn {
-  --bs-btn-padding-x: 0.75rem;
-  --bs-btn-padding-y: 0.375rem;
+  --bs-btn-padding-x: 0.65rem;
+  --bs-btn-padding-y: 0.175rem;
   --bs-btn-font-family: ;
   --bs-btn-font-size: 1rem;
   --bs-btn-font-weight: 500;
@@ -3106,8 +3106,8 @@ fieldset:disabled .btn {
 
 .btn-success {
   --bs-btn-color: #000;
-  --bs-btn-bg: #67c29c;
-  --bs-btn-border-color: #67c29c;
+  --bs-btn-bg: var(--bs-primary);
+  --bs-btn-border-color: var(--bs-primary);
   --bs-btn-hover-color: #000;
   --bs-btn-hover-bg: #7ecbab;
   --bs-btn-hover-border-color: #76c8a6;
@@ -3117,8 +3117,8 @@ fieldset:disabled .btn {
   --bs-btn-active-border-color: #76c8a6;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #000;
-  --bs-btn-disabled-bg: #67c29c;
-  --bs-btn-disabled-border-color: #67c29c;
+  --bs-btn-disabled-bg: var(--bs-primary);
+  --bs-btn-disabled-border-color: var(--bs-primary);
 }
 
 .btn-info {
@@ -5637,8 +5637,8 @@ fieldset:disabled .btn {
   --bs-modal-width: 500px;
   --bs-modal-padding: 1rem;
   --bs-modal-margin: 0.5rem;
-  --bs-modal-color: ;
-  --bs-modal-bg: #fff;
+  --bs-modal-color: var(--bs-body-color);
+  --bs-modal-bg: var(--bs-body-bg);
   --bs-modal-border-color: var(--bs-border-color-translucent);
   --bs-modal-border-width: 1px;
   --bs-modal-border-radius: 0.5rem;
