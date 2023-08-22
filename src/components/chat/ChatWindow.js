@@ -56,7 +56,7 @@ const ChatWindow = ({ accountId }) => {
 	return (
 	  <div>
 	<button className="toggle-chat-button" onClick={() => setIsOpen(!isOpen)}>
-	  {isOpen ? 'Hide Chat' : 'Show Chat'}
+	  {isOpen ? 'Hide Live Pack Chat' : 'Show Live Pack Chat'}
 	</button>
 	{!isOpen && messages && messages.length > 0 && (
 	  <div className="last-message">
