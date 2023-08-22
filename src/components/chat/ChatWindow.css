@@ -113,4 +113,6 @@
   background-color: var(--bs-body-bg);
   box-shadow: 12px 12px 10px -15px var(--bs-gray-900);
   z-index: 2000;
+  width: 400px;
+  max-width: 70%;
 }
