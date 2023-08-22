@@ -60,7 +60,6 @@ const ChatWindow = ({ accountId }) => {
 	</button>
 	{!isOpen && messages && messages.length > 0 && (
 	  <div className="last-message">
-	  <small><i>Latest Chat Message:</i></small><br/>
 		<strong>{messages[messages.length - 1].username}</strong>: {messages[messages.length - 1].text}  {messages[messages.length - 1].createdAt && new Date(messages[messages.length - 1].createdAt.seconds * 1000).toLocaleTimeString()}
 	  </div>
 	)}
