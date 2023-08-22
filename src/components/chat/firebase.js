@@ -3,7 +3,7 @@ import { getFirestore } from "firebase/firestore"; // Import Firestore
 // import { getAnalytics } from "firebase/analytics"; // Uncomment if you need Analytics
 
 const firebaseConfig = {
-  apiKey: "AIzaSyA6MjVupfloKoZfoFq6GnZA9VBlPT6B5lA",
+  apiKey: process.env.FIREBASE,
   authDomain: "sharddog-social-chat.firebaseapp.com",
   projectId: "sharddog-social-chat",
   storageBucket: "sharddog-social-chat.appspot.com",
