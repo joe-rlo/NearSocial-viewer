@@ -106,3 +106,11 @@
 .toggle-chat-button:hover {
   background-color: var(--bs-secondary);
 }
+.last-message{
+  position: fixed;
+  bottom: 38px;
+  left: 0;
+  background-color: var(--bs-body-bg);
+  box-shadow: 12px 12px 10px -15px var(--bs-gray-900);
+  z-index: 2000;
+}

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { collection, query, orderBy, limit, addDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from './firebase'; // Adjust the path as needed
 import { useCollectionData } from 'react-firebase-hooks/firestore';
@@ -12,6 +12,7 @@ const ChatWindow = ({ accountId }) => {
   const messagesCollection = collection(db, 'messages');
   const messagesQuery = query(messagesCollection, orderBy('createdAt'), limit(50));
   const [messages] = useCollectionData(messagesQuery, { idField: 'id' });
+  const messagesEndRef = useRef(null);
 
   const sendMessage = async (e) => {
 	e.preventDefault();
@@ -42,15 +43,27 @@ const ChatWindow = ({ accountId }) => {
 	  return color;
 	};
 
+	useEffect(() => {
+	  if (isOpen) {
+		messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+	  }
+	}, [messages, isOpen]);
+
 	const toggleFullScreen = () => {
 	  setIsFullScreen(!isFullScreen);
 	};
 
 	return (
 	  <div>
-		<button className="toggle-chat-button" onClick={() => setIsOpen(!isOpen)}>
-		  {isOpen ? 'Hide Dog Pack Chat' : 'Show Dog Pack Chat'}
-		</button>
+	<button className="toggle-chat-button" onClick={() => setIsOpen(!isOpen)}>
+	  {isOpen ? 'Hide Chat' : 'Show Chat'}
+	</button>
+	{!isOpen && messages && messages.length > 0 && (
+	  <div className="last-message">
+	  <small><i>Latest Chat Message:</i></small><br/>
+		<strong>{messages[messages.length - 1].username}</strong>: {messages[messages.length - 1].text}  {messages[messages.length - 1].createdAt && new Date(messages[messages.length - 1].createdAt.seconds * 1000).toLocaleTimeString()}
+	  </div>
+	)}
 
 		{isOpen && (
 		  <div className={`chat-window ${isFullScreen ? 'full-screen' : ''}`}>
@@ -69,6 +82,7 @@ const ChatWindow = ({ accountId }) => {
 					</span>
 				  </div>
 				))}
+				<div ref={messagesEndRef} />
 			</div>
 	  <form onSubmit={sendMessage} className="chat-form">
 		<input
