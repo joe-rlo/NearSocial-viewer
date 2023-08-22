@@ -1,0 +1,108 @@
+/* ChatWindow.css */
+.chat-window {
+  position: fixed;
+  bottom: 34px;
+ left: 0;
+  width: 600px;
+  max-width: 100%;
+  height: 400px;
+  border: 1px solid #ccc;
+  border-radius: 10px 10px 0 0;
+  background-color: var(--bs-body-bg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  z-index: 2000;
+}
+
+.full-screen-button {
+ background-color: #4CAF50; /* Green background */
+   border: none; /* No border */
+   color: white; /* White text */
+   padding: 10px 20px; /* Padding */
+   text-align: center; /* Centered text */
+   text-decoration: none; /* No underline */
+   display: inline-block; /* Inline-block */
+   font-size: 16px; /* Font size */
+   margin: 4px 2px; /* Margin */
+   cursor: pointer; /* Pointer cursor on hover */
+   border-radius: 4px; /* Rounded corners */
+}
+
+.chat-window.full-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+}
+.chat-note{
+	color:var(--bs-secondary);
+	font-size: 9px;
+}
+.messages {
+  flex-grow: 1;
+  padding: 10px;
+  overflow-y: scroll;
+  color: var(--bs-body-color);
+}
+
+.message {
+  margin-bottom: 10px;
+}
+
+.timestamp {
+  font-size: 0.8em;
+  color: #888;
+  margin-left: 5px;
+}
+
+.chat-form {
+  display: flex;
+  border-top: 1px solid #ccc;
+}
+
+.chat-input {
+  flex-grow: 1;
+  padding: 10px;
+  border: none;
+  outline: none;
+}
+
+.send-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.send-button:hover {
+  background-color: var(--bs-primary);
+}
+
+.send-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* ChatWindow.css */
+.toggle-chat-button {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: var(--bs-primary);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 0 10px 0 0;
+  z-index: 2000;
+}
+
+.toggle-chat-button:hover {
+  background-color: var(--bs-secondary);
+}
