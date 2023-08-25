@@ -10,7 +10,7 @@ const ChatWindow = ({ accountId }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const messagesCollection = collection(db, 'messages');
-  const messagesQuery = query(messagesCollection, orderBy('createdAt', 'desc'), limit(500));
+  const messagesQuery = query(messagesCollection, orderBy('createdAt'), limit(500));
   const [messages] = useCollectionData(messagesQuery, { idField: 'id' });
   const messagesEndRef = useRef(null);
 
