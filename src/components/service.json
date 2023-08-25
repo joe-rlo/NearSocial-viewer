@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "sharddog-social-chat",
+  "private_key_id": "e8dc668dbf4e9d46f4473f85c3b34a712105e179",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDVrfAIaKRKC7gF\noND6lwmwXXv0TCASILqnqmbLknH/Rn9da5oygaJhPsilXwEQmii7cZP7JGrRtx7w\nFzLGCeTgJyNI+CUA+488xrudZvzoEBORnWEXxxu8heYdC5TGLRQ0wlqtWoYcE3x2\n19+X0pA/mq9Kxp87TDeNF91aq+w1mh3xt40A1nJk7GLomyl2kSpQ1NnuB1l6vcAb\nKUVknt/jGdKypPACQSWOZkHpLxk09JV643qfoXQqIORC7zfXhMjG5xnmb9pxFpyz\nzVmokiKBP6I/FG5uBn7tkjlw9gqq9Y88x+J3CHqhUv4mlbZurhj6QExhamsLoVPo\n2rXwFNidAgMBAAECggEAP7qCrl9XMGZSWgteiH5ne1xGTdQudHmiccMWqXxh13rV\nHa2r7YhQP6ST/w5YqPTxVQZI1kxEN4vgBEdG812cD2Zc1bR8hNCCJeQ3rHg80ZGJ\n5JIFlSvjD9T3jo4XrwtezWVx2eX3vYPqSR+VJhi8wNuHkEuwzeSrZL9LW3GPH2Tu\nJN3CGXlwYrKF1uIy/0Eda+S/eAKuSvXHB0ZYi1oc+RaE5nuP9SskzisyL4dDR3Xo\nPTSfzMeQ49HulVjYvcYXCwnLjnAccFaeTlWkg/O1ONJkkU1ec/qjs/k/d59VeFY0\nbuXX2K4lCfEz4nA8zt1CL9t86eC25A8rlrom/+TYGQKBgQDuEHv4QMsGxP/pNaBJ\nsD87uSwNlxz9pxkLomVN0XALGRrQ0KwotGyAMT3W07MLJ8F/sdv0DHBMbZfzLfLZ\nV0ggvaUJg3bWN4TElcIVS8z0Xq5YiJDTCO1mlXj7jmWpw6lmf0RXYPMSgbSowFIN\n89cJliaFKO2nx6VBSeg2M5kcgwKBgQDlxyTo+dYC7EubchG3ptUoftnREiBeNxPF\nMkH95EyOzrfCFe+UFX9vaXgmaxiH7PbyOX9udSD/Wjc8RRzgIUVDgzxEZ/Q801gu\ncT0hZdtaB7/RTN89LnEWREhzprLjg6GYjPi6cHSF59jUFNLZB710Ry+j/0h+krmR\nt/C4qBRsXwKBgQCF96DLwyp9VL7ubc8VqKjs4vd3bmJSG4ZslaaMdB+pHyeH+uXm\nwiGMwikai2dmD6lEQsKUQ6uuVr37iw/uXr+oLRCCmgh15ChCuEPP2CguHFngWHmn\nSI7P+61pYmizb/gUReofgd9HutX/YLrMPzvzmRt0M+QJVsAYTY7vcXnoIQKBgQCC\nc2AiIIz+1dZK5yTl5gKIXhQdXTQhKRXBU7ohgXZxcSzkNH3yzY2u2+sJrK2dpcvB\nUyFkvXzBXB+VyQsOt/TR0nTpxTblPXuHymRRTLmO0G13TzRCUNaFNLkJZ6+R+U5K\nBGbFukh9KVZxeW0HKBzIIg4LBkjLC1PtRceVnl8R8wKBgQC8q7U0AotYge47wFxi\nY1zU71gdcAPC66gb0c45wolVK9bEB/hFZFUQhbuCDzxU+RE6fSNZRizoyUZuT7St\nGkRgy6QjRy9RkXipuOYZDlHDBcawBtPuAUflP2aQq+qqgzk931SDQaCoczwBRcyB\n5JtDaexTP5+WU84Q5xI7GhD2dQ==\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-lydqg@sharddog-social-chat.iam.gserviceaccount.com",
+  "client_id": "111312297039437227980",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-lydqg%40sharddog-social-chat.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

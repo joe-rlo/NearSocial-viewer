@@ -1,0 +1,9 @@
+.signed {
+  border: 2px solid green;
+  padding: 10px;
+}
+
+.expiring {
+  color: red;
+  font-weight: bold;
+}

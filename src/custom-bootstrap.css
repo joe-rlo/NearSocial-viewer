@@ -11821,3 +11821,14 @@ p > #ytplayer {
   position: relative;
   top: -80px;
 }
+.image-preview {
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0;
+}
+
+.video-preview {
+    width: 100%;
+    max-height: 300px;
+    margin: 10px 0;
+}

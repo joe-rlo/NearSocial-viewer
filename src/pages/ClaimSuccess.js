@@ -157,6 +157,7 @@ const useWindowSize = () => {
                View on Mintbase
              </a>
              <br />
+             <img src="https://shard.dog/img/TradePort1.png" style={{width:"25px", marginLeft:"3px", marginRight:"8px", verticalAlign: "middle"}} /><a href='https://www.tradeport.xyz/near/' target="_blank" id="tradeport">View on Tradeport</a>
              <br />
              <small>
                <i>

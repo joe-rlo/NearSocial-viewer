@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { collection, query, orderBy, limit, addDoc, serverTimestamp } from 'firebase/firestore';
-import { db } from './firebase'; // Adjust the path as needed
+import { db } from '../firebase'; // Adjust the path as needed
 import { useCollectionData } from 'react-firebase-hooks/firestore';
 import './ChatWindow.css';
 
@@ -10,7 +10,7 @@ const ChatWindow = ({ accountId }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const messagesCollection = collection(db, 'messages');
-  const messagesQuery = query(messagesCollection, orderBy('createdAt'), limit(50));
+  const messagesQuery = query(messagesCollection, orderBy('createdAt', 'desc'), limit(500));
   const [messages] = useCollectionData(messagesQuery, { idField: 'id' });
   const messagesEndRef = useRef(null);
 

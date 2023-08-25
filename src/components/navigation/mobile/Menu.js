@@ -112,7 +112,7 @@ const StyledMenu = styled.div`
   }
 
   .bottom-links {
-    margin-top: auto;
+    margin-top: 20px;
 
     a,
     button {
@@ -240,6 +240,13 @@ export function Menu(props) {
               <NearSocialIcon /> Dog Park (Coming Soon)
             </NavigationButton>
           </li>
+          {props.signedAccountId === "sharddog.near" &&
+               <li>
+            <NavigationButton route="/owner">
+              <NearSocialIcon /> Owner Area
+            </NavigationButton>
+          </li>
+        }
         </ul>
         <ul className="bottom-links">
           <li>

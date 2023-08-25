@@ -80,6 +80,9 @@ export function DesktopNavigation(props) {
           </NavigationButton>
           <NavigationButton route={"/comic"}>Comic</NavigationButton>
           <NavigationButton route={"/dogpark"}>Dog Park</NavigationButton>
+          {props.signedAccountId === "sharddog.near" &&
+            <NavigationButton route={"/owner"}>Owner Area</NavigationButton>
+          }
         </div>
         <div className="user-section">
           <NavigationButton route={"/changes"}>Changelog</NavigationButton>

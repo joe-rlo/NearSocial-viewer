@@ -14,6 +14,7 @@ import ChangelogPage from "./pages/ChangeLog";
 import ClaimSuccess from "./pages/ClaimSuccess";
 import ComicPage from "./pages/ComicPage";
 import DogParkPage from "./pages/DogParkPage";
+import OwnerPage from "./pages/OwnerPage";
 import { setupWalletSelector } from "@near-wallet-selector/core";
 import { setupNearWallet } from "@near-wallet-selector/near-wallet";
 import { setupMyNearWallet } from "@near-wallet-selector/my-near-wallet";
@@ -194,6 +195,10 @@ function App(props) {
             <Route path={"/dogpark*"}>
               <NavigationWrapper {...passProps} />
               <DogParkPage {...passProps} />
+            </Route>
+            <Route path={"/owner*"}>
+              <NavigationWrapper {...passProps} />
+              <OwnerPage {...passProps} />
             </Route>
             <Route path={"/:widgetSrc*"}>
               <NavigationWrapper {...passProps} />
