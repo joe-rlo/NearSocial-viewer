@@ -5,7 +5,7 @@ import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 const NFTGrid = () => {
   const [tokens, setTokens] = useState([]);
   const totalCollectibles = 44;
-  const placeholder = "https://shard.dog/v2/img/00_comicpanels.jpg"; // Placeholder image path
+  const placeholder = "https://shard.dog/v2/img/sharddogcomicicon.jpeg"; // Placeholder image path
   const accountId = useAccountId();
   const fetchTokens = () => {
     fetch("https://graph.mintbase.xyz/mainnet", {
@@ -111,6 +111,7 @@ const NFTGrid = () => {
                       src={selectedImage}
                       alt="Selected Collectible"
                       className="comic-zoomable-image"
+                      style={{ width: "100%", height: "100%", maxWidth: "1024px", objectFit: "contain" }}
                     />
                   </TransformComponent>
                 </TransformWrapper>

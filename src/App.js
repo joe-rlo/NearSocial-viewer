@@ -171,7 +171,7 @@ function App(props) {
 
   return (
     <div className="App">
-
+      <EthersProviderContext.Provider value={ethersProviderContext}>
         <Router basename={process.env.PUBLIC_URL}>
           <Switch>
             <Route path={"/embed/:widgetSrc*"}>
@@ -206,7 +206,7 @@ function App(props) {
             </Route>
           </Switch>
         </Router>
-
+      </EthersProviderContext.Provider>
     </div>
   );
 }

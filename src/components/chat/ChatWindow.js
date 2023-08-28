@@ -69,7 +69,7 @@ const ChatWindow = ({ accountId }) => {
 		  <button className="full-screen-button" onClick={toggleFullScreen}>
 			{isFullScreen ? 'Exit Full Screen' : 'Full Screen'}
 		  </button>
-		  <small className="chat-note"><i><b>Note:</b> This is all off-chain and public to all users on sharddog.social only. Have fun and be nice</i></small>
+		  <small className="chat-note"><i><b>Note:</b> This is all off-chain and public to all users on sharddog.social only. Messages delete after 24 hours. Have fun and be nice</i></small>
 			<div className="messages">
 			  {messages &&
 				messages.map((msg) => (
