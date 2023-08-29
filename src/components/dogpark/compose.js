@@ -1,5 +1,5 @@
 import * as nearApi from "near-api-js"; // make sure to install this package
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, useMemo } from "react";
 import { useAccountId } from "near-social-vm";
 import SimpleMDE from "react-simplemde-editor";
 import "easymde/dist/easymde.min.css";
@@ -39,7 +39,17 @@ function PostCompose() {
 
 	  setMediaPreviews(previews);
   };
+const mdeOptions = {
+	  placeholder: 'Write your post in Markdown...'
+  };
 
+  const mdeComponent = useMemo(() => (
+	<SimpleMDE
+	  value={markdownText}
+	  onChange={setMarkdownText}
+	  options={mdeOptions}
+	/>
+  ), [markdownText]);
 
   const savePost = async () => {
 	let uploadedURLs = [];
@@ -99,14 +109,11 @@ function PostCompose() {
 	<div className="post-compose">
 	  <h2>Create a New Post</h2>
 
-	  <input type="text" placeholder="Title" value={title} onChange={(e) => setTitle(e.target.value)} />
+	  <input type="text" placeholder="Title" value={title} onChange={(e) => setTitle(e.target.value)} /><br />
 	  <input type="text" placeholder="Description" value={description} onChange={(e) => setDescription(e.target.value)} />
-
-	  <SimpleMDE
-		value={markdownText}
-		onChange={setMarkdownText}
-		options={{ placeholder: 'Write your post in Markdown...' }}
-	  />
+	  <br />
+	    {mdeComponent}
+	 
 
 	  <ReactMarkdown>{markdownText}</ReactMarkdown>
 <div className="media-previews">
