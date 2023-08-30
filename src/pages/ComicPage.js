@@ -20,7 +20,7 @@ const NFTGrid = () => {
 	   query MyQuery($accountId: String!) {
 		 mb_views_nft_tokens(
 		   where: { nft_contract_id: { _eq: "comic.sharddog.near" }, owner: { _eq: $accountId }}
-		   order_by: { minted_timestamp: desc }
+		   order_by: { token_id: asc }
 		 ) {
 		   media
 		   token_id
