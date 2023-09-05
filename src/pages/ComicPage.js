@@ -3,10 +3,18 @@ import React, { useState, useEffect } from "react";
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 
 const NFTGrid = () => {
-  const [tokens, setTokens] = useState([]);
   const totalCollectibles = 44;
   const placeholder = "https://shard.dog/v2/img/sharddogcomicicon.jpeg"; // Placeholder image path
   const accountId = useAccountId();
+  const initializeTokens = () => {
+    return Array.from({ length: totalCollectibles }, (_, index) => ({
+      media: placeholder,
+      token_id: index + 1,
+    }));
+  };
+
+  const [tokens, setTokens] = useState(initializeTokens());
+
   const fetchTokens = () => {
     fetch("https://graph.mintbase.xyz/mainnet", {
       method: "POST",
@@ -33,10 +41,14 @@ const NFTGrid = () => {
       .then((res) => res.json()) // Parse the JSON response
       .then((data) => {
         const fetchedTokens = data.data.mb_views_nft_tokens;
-        if (fetchedTokens.length > 0) {
-          setTokens([...tokens, ...fetchedTokens]); // Update the tokens state
-        }
+        const updatedTokens = [...tokens];
+        fetchedTokens.forEach((token) => {
+          const position = parseInt(token.token_id.split(":")[0], 10) - 1; // Extract the number before the colon
+          updatedTokens[position] = token;
+        });
+        setTokens(updatedTokens);
       })
+
       .catch((error) => {
         console.error("An error occurred:", error);
         // Handle the error as needed
@@ -63,19 +75,15 @@ const NFTGrid = () => {
         className={`panel${columns === 1 ? " single-column" : ""}`}
         style={{ gridTemplateColumns: `repeat(${columns}, 1fr)` }}
       >
-        {Array.from({ length: end - start + 1 }, (_, index) => {
-          const tokenIndex = start + index - 1;
-          const token = tokens.find((_, i) => i === tokenIndex) || {};
-          return (
-            <div key={index} className="nut">
-              <img
-                src={token.media || placeholder}
-                alt={`Collectible ${tokenIndex + 1}`}
-                onClick={() => handleImageClick(token.media || placeholder)}
-              />
-            </div>
-          );
-        })}
+        {tokens.slice(start - 1, end).map((token, index) => (
+          <div key={index} className="nut">
+            <img
+              src={token.media}
+              alt={`Collectible ${token.token_id}`}
+              onClick={() => handleImageClick(token.media)}
+            />
+          </div>
+        ))}
         <hr className="dashed-2" />
       </div>
     </>
