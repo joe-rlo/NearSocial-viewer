@@ -201,6 +201,10 @@ function App(props) {
               <NavigationWrapper {...passProps} />
               <DogParkPage {...passProps} />
             </Route>
+            <Route path={"/nearweek*"}>
+              <NavigationWrapper {...passProps} />
+              <DogParkPage {...passProps} />
+            </Route>
             <Route path={"/owner*"}>
               <NavigationWrapper {...passProps} />
               <OwnerPage {...passProps} />

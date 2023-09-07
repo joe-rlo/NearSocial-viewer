@@ -17,7 +17,7 @@ import { useCollectionData } from "react-firebase-hooks/firestore";
 import "firebase/firestore";
 import "../Feed.css";
 
-function Feed({ userId }) {
+function Nearweek({ userId }) {
   const [contentFeed, setContentFeed] = useState([]);
   const accountId = useAccountId();
 
@@ -75,11 +75,11 @@ function Feed({ userId }) {
           <h4 style={{ textAlign: "center" }}>
             Coming soon....In the meantime...Check your "rep"...
           </h4>
-          <Widget src="sharddog.near/widget/UserRep.solo" />
+          <Widget src="sharddog.near/widget/NearweekCovers" />
         </>
       )}
     </div>
   );
 }
 
-export default Feed;
+export default Nearweek;
