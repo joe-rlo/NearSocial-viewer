@@ -11818,6 +11818,7 @@ p > #ytplayer {
   padding-right: 10px;
   font-style: italic;
   text-transform: uppercase;
+  color: var(--bs-body-color);
 }
 
 .comic-layout {
@@ -11834,4 +11835,13 @@ p > #ytplayer {
   width: 100%;
   max-height: 300px;
   margin: 10px 0;
+}
+.comic-link {
+  color: var(--bs-secondary);
+  text-align: center;
+  margin: 0 auto;
+  padding-left: 15px;
+  font-size: 1.1rem;
+  font-style: normal;
+  font-weight: 700;
 }

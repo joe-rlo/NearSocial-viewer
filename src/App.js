@@ -13,6 +13,7 @@ import ViewPage from "./pages/ViewPage";
 import ChangelogPage from "./pages/ChangeLog";
 import ClaimSuccess from "./pages/ClaimSuccess";
 import ComicPage from "./pages/ComicPage";
+import ComicNDCPage from "./pages/ComicNDCPage";
 import DogParkPage from "./pages/DogParkPage";
 import OwnerPage from "./pages/OwnerPage";
 import { setupWalletSelector } from "@near-wallet-selector/core";
@@ -185,12 +186,16 @@ function App(props) {
               <NavigationWrapper {...passProps} />
               <ChangelogPage {...passProps} />
             </Route>
-            <Route path="/claimsuccess/:id">
+            <Route path="/claimsuccess/:id*">
               <ClaimSuccess {...passProps} />
             </Route>
             <Route path={"/comic"}>
               <NavigationWrapper {...passProps} />
               <ComicPage {...passProps} />
+            </Route>
+            <Route path={"/ndccomic"}>
+              <NavigationWrapper {...passProps} />
+              <ComicNDCPage {...passProps} />
             </Route>
             <Route path={"/dogpark*"}>
               <NavigationWrapper {...passProps} />
