@@ -72,9 +72,6 @@ function Nearweek({ userId }) {
         ))
       ) : (
         <>
-          <h4 style={{ textAlign: "center" }}>
-            Coming soon....In the meantime...Check your "rep"...
-          </h4>
           <Widget src="sharddog.near/widget/NearweekCovers" />
         </>
       )}
