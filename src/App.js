@@ -16,6 +16,7 @@ import ComicPage from "./pages/ComicPage";
 import ComicNDCPage from "./pages/ComicNDCPage";
 import DogParkPage from "./pages/DogParkPage";
 import OwnerPage from "./pages/OwnerPage";
+import NearweekPage from "./pages/NearweekPage";
 import { setupWalletSelector } from "@near-wallet-selector/core";
 import { setupNearWallet } from "@near-wallet-selector/near-wallet";
 import { setupMyNearWallet } from "@near-wallet-selector/my-near-wallet";
@@ -203,7 +204,7 @@ function App(props) {
             </Route>
             <Route path={"/nearweek*"}>
               <NavigationWrapper {...passProps} />
-              <DogParkPage {...passProps} />
+              <NearweekPage {...passProps} />
             </Route>
             <Route path={"/owner*"}>
               <NavigationWrapper {...passProps} />
