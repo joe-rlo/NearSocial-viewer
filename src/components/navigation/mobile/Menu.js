@@ -224,9 +224,9 @@ export function Menu(props) {
             </NavigationButton>
           </li>
           <li>
-            <NavigationButton route={`/${props.widgets.allFeed}`}>
-              <Code />
-              Firehose Feed
+            <NavigationButton route="/theriver">
+              <Book />
+              The River
             </NavigationButton>
           </li>
           <li>
@@ -240,13 +240,13 @@ export function Menu(props) {
               <NearSocialIcon /> Dog Park (Coming Soon)
             </NavigationButton>
           </li>
-          {props.signedAccountId === "sharddog.near" &&
-               <li>
-            <NavigationButton route="/owner">
-              <NearSocialIcon /> Owner Area
-            </NavigationButton>
-          </li>
-        }
+          {props.signedAccountId === "sharddog.near" && (
+            <li>
+              <NavigationButton route="/owner">
+                <NearSocialIcon /> Owner Area
+              </NavigationButton>
+            </li>
+          )}
         </ul>
         <ul className="bottom-links">
           <li>
