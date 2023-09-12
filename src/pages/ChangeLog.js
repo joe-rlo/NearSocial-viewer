@@ -8,6 +8,7 @@ import ListGroupItem from "react-bootstrap/Badge";
 
 export default function ChangelogPage() {
   // Replace this with data fetched from an API or other source
+
   const [changelog, setChangelog] = useState([
     {
       version: "2023-08-20",
