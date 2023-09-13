@@ -2,7 +2,7 @@
 .chat-window {
   position: fixed;
   bottom: 34px;
- left: 0;
+  left: 0;
   width: 600px;
   max-width: 100%;
   height: 400px;
@@ -16,17 +16,17 @@
 }
 
 .full-screen-button {
- background-color: #4CAF50; /* Green background */
-   border: none; /* No border */
-   color: white; /* White text */
-   padding: 10px 20px; /* Padding */
-   text-align: center; /* Centered text */
-   text-decoration: none; /* No underline */
-   display: inline-block; /* Inline-block */
-   font-size: 16px; /* Font size */
-   margin: 4px 2px; /* Margin */
-   cursor: pointer; /* Pointer cursor on hover */
-   border-radius: 4px; /* Rounded corners */
+  background-color: #4caf50; /* Green background */
+  border: none; /* No border */
+  color: white; /* White text */
+  padding: 10px 20px; /* Padding */
+  text-align: center; /* Centered text */
+  text-decoration: none; /* No underline */
+  display: inline-block; /* Inline-block */
+  font-size: 16px; /* Font size */
+  margin: 4px 2px; /* Margin */
+  cursor: pointer; /* Pointer cursor on hover */
+  border-radius: 4px; /* Rounded corners */
 }
 
 .chat-window.full-screen {
@@ -37,9 +37,9 @@
   height: 95%;
   z-index: 1000;
 }
-.chat-note{
-	color:var(--bs-secondary);
-	font-size: 9px;
+.chat-note {
+  color: var(--bs-secondary);
+  font-size: 9px;
 }
 .messages {
   flex-grow: 1;
@@ -68,6 +68,7 @@
   padding: 10px;
   border: none;
   outline: none;
+  color: #000;
 }
 
 .send-button {
@@ -106,7 +107,7 @@
 .toggle-chat-button:hover {
   background-color: var(--bs-secondary);
 }
-.last-message{
+.last-message {
   position: fixed;
   bottom: 38px;
   left: 0;
