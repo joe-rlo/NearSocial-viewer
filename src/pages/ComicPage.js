@@ -1,6 +1,7 @@
 import { useAccountId } from "near-social-vm";
 import React, { useState, useEffect } from "react";
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
+import { Helmet } from "react-helmet";
 
 const NFTGrid = () => {
   const totalCollectibles = 44;
@@ -90,69 +91,86 @@ const NFTGrid = () => {
   );
 
   return (
-    <div className="comic-wrapper">
-      <div className="dividing-canopy"></div>
-      <div className="comic-context-title">
-        <div className="context-title-text">
-          <h2>ShardDog The Comic</h2>
-        </div>
-        <br />
-        <small
-          style={{
-            fontSize: "11px",
-            textTransform: "none",
-            lineHeight: "12px",
-          }}
-        >
-          Collect all panels from{" "}
-          <a
-            href="https://shard.dog/comic"
-            target="_blank"
-            style={{ color: "#fff" }}
-          >
-            shard.dog/comic
-          </a>
+    <div>
+      <Helmet>
+        <title>ShardDog Comic</title>
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@sharddog" />
+        <meta
+          name="twitter:image"
+          content="https://sharddog.social/assets/Comic_sharddog_social.png"
+        />
+        <meta
+          property="og:image"
+          content="https://sharddog.social/assets/Comic_sharddog_social.png"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="ShardDog Comic" />
+      </Helmet>
+      <div className="comic-wrapper">
+        <div className="dividing-canopy"></div>
+        <div className="comic-context-title">
+          <div className="context-title-text">
+            <h2>ShardDog The Comic</h2>
+          </div>
           <br />
-          Claim new panels daily to fill the spots below
-        </small>
-      </div>
-      <div className="comic-layout">
-        <div className="nft-grid">
-          {renderPanel(1, 1, 1)}
-          {renderPanel(2, 7)}
-          {renderPanel(8, 13)}
-          {renderPanel(14, 19)}
-          {renderPanel(20, 25)}
-          {renderPanel(26, 31)}
-          {renderPanel(32, 37)}
-          {renderPanel(38, 43)}
-          {renderPanel(44, 44, 1)}
-          {/* Modal */}
-          {selectedImage && (
-            <div className="comic-modal">
-              <div className="comic-modal-content">
-                <button onClick={closeModal} className="btn btn-primary">
-                  Close
-                </button>
-                <TransformWrapper>
-                  <TransformComponent>
-                    <img
-                      src={selectedImage}
-                      alt="Selected Collectible"
-                      className="comic-zoomable-image"
-                      style={{
-                        width: "100%",
-                        height: "100%",
-                        maxHeight: "720px",
-                        maxWidth: "1024px",
-                        objectFit: "contain",
-                      }}
-                    />
-                  </TransformComponent>
-                </TransformWrapper>
+          <small
+            style={{
+              fontSize: "11px",
+              textTransform: "none",
+              lineHeight: "12px",
+            }}
+          >
+            Collect all panels from{" "}
+            <a
+              href="https://shard.dog/comic"
+              target="_blank"
+              style={{ color: "#fff" }}
+            >
+              shard.dog/comic
+            </a>
+            <br />
+            Claim new panels daily to fill the spots below
+          </small>
+        </div>
+        <div className="comic-layout">
+          <div className="nft-grid">
+            {renderPanel(1, 1, 1)}
+            {renderPanel(2, 7)}
+            {renderPanel(8, 13)}
+            {renderPanel(14, 19)}
+            {renderPanel(20, 25)}
+            {renderPanel(26, 31)}
+            {renderPanel(32, 37)}
+            {renderPanel(38, 43)}
+            {renderPanel(44, 44, 1)}
+            {/* Modal */}
+            {selectedImage && (
+              <div className="comic-modal">
+                <div className="comic-modal-content">
+                  <button onClick={closeModal} className="btn btn-primary">
+                    Close
+                  </button>
+                  <TransformWrapper>
+                    <TransformComponent>
+                      <img
+                        src={selectedImage}
+                        alt="Selected Collectible"
+                        className="comic-zoomable-image"
+                        style={{
+                          width: "100%",
+                          height: "100%",
+                          maxHeight: "720px",
+                          maxWidth: "1024px",
+                          objectFit: "contain",
+                        }}
+                      />
+                    </TransformComponent>
+                  </TransformWrapper>
+                </div>
               </div>
-            </div>
-          )}
+            )}
+          </div>
         </div>
       </div>
     </div>

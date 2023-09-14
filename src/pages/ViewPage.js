@@ -3,6 +3,7 @@ import { Widget } from "near-social-vm";
 import { useParams } from "react-router-dom";
 import { useQuery } from "../hooks/useQuery";
 import { useHashRouterLegacy } from "../hooks/useHashRouterLegacy";
+import { Helmet } from "react-helmet";
 
 export default function ViewPage(props) {
   useHashRouterLegacy();
@@ -35,16 +36,37 @@ export default function ViewPage(props) {
   }, [src, query, setWidgetSrc, viewSourceWidget]);
 
   return (
-    <div className="container-xl">
-      <div className="row">
-        <div
-          className="d-inline-block position-relative overflow-hidden"
-          style={{
-            "--body-top-padding": "4px",
-            paddingTop: "var(--body-top-padding)",
-          }}
-        >
-          <Widget key={src} src={src} props={widgetProps} />{" "}
+    <div>
+      <Helmet>
+        <title>ShardDog Social</title>
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@sharddog" />
+        <meta
+          name="twitter:image"
+          content="https://sharddog.social/assets/ShardDogLogo.png"
+        />
+        <meta
+          property="og:image"
+          content="https://sharddog.social/assets/ShardDogLogo.png"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="ShardDog Social" />
+        <meta
+          property="og:description"
+          content="Where anyone can build an audience"
+        />
+      </Helmet>
+      <div className="container-xl">
+        <div className="row">
+          <div
+            className="d-inline-block position-relative overflow-hidden"
+            style={{
+              "--body-top-padding": "4px",
+              paddingTop: "var(--body-top-padding)",
+            }}
+          >
+            <Widget key={src} src={src} props={widgetProps} />{" "}
+          </div>
         </div>
       </div>
     </div>
