@@ -4,7 +4,7 @@ import { Widget } from "near-social-vm";
 import { useParams, useLocation } from "react-router-dom";
 import { useQuery } from "../hooks/useQuery";
 import Confetti from "react-confetti";
-import "../claim.css";
+//import "../claim.css";
 
 export default function Claim({ params }) {
   const [isClient, setIsClient] = useState(false);
